@@ -1,0 +1,43 @@
+# curl --location 'localhost:8001/auth/login'
+#--header 'Content-Type: application/json'
+#--data '{
+#    "username": "2000",
+#    "password": "abc123"
+#}'
+POST localhost:8001/auth/login
+Content-Type: application/json
+
+{
+  "username": "2000",
+  "password": "abc123"
+}
+
+<> 2024-01-15T215113.200.json
+
+###
+# curl --location 'localhost:8001/auth/refresh'
+#--header 'Content-Type: application/json'
+#--data '{
+#    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MSIsIjk1NDgyIiwiOTU0ODMiLCI5NTQ3MCIsIjk1NDc2IiwiOTU0NzciLCI5NTQ3OCJdLCJ1c2VybmFtZSI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNTM3NzM2Mn0.XiO_2dkZE2eVAXyFEYiE4YP4HG9OxtSnF3c9cEFCTb0",
+#    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImNpZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MSIsIjk1NDgyIiwiOTU0ODMiLCI5NTQ3MCIsIjk1NDc2IiwiOTU0NzciLCI5NTQ3OCJdLCJ1biI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNzk2NTc2Mn0.czTkfecPYnuIPdlaNQv8gr_OVp2CgesnunjikbrVkzY"
+#}'
+POST localhost:8001/auth/refresh
+Content-Type: application/json
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MSIsIjk1NDgyIiwiOTU0ODMiLCI5NTQ3MCIsIjk1NDc2IiwiOTU0NzciLCI5NTQ3OCJdLCJ1c2VybmFtZSI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNTM3NzM2Mn0.XiO_2dkZE2eVAXyFEYiE4YP4HG9OxtSnF3c9cEFCTb0",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImNpZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MSIsIjk1NDgyIiwiOTU0ODMiLCI5NTQ3MCIsIjk1NDc2IiwiOTU0NzciLCI5NTQ3OCJdLCJ1biI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNzk2NTc2Mn0.czTkfecPYnuIPdlaNQv8gr_OVp2CgesnunjikbrVkzY"
+}
+
+###
+###
+
+# curl --location --request POST 'localhost:8001/auth/verify?customer_id=2000&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MyIsIjk1NDcwIiwiOTU0NzYiLCI5NTQ3NyIsIjk1NDc4IiwiOTU0ODEiLCI5NTQ4MiJdLCJ1c2VybmFtZSI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNTM3NzgwMH0.y_v3H9fTciofvKNr8qIO2mXPUcvtRzIRb7MUwoa4qnc&routeName=GetCustomer&account_id=95483'
+POST localhost:8001/auth/verify?customer_id=2000&
+    token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjIwMDAiLCJhY2NvdW50cyI6WyI5NTQ4MyIsIjk1NDcwIiwiOTU0NzYiLCI5NTQ3NyIsIjk1NDc4IiwiOTU0ODEiLCI5NTQ4MiJdLCJ1c2VybmFtZSI6IjIwMDAiLCJyb2xlIjoidXNlciIsImV4cCI6MTcwNTM3NzgwMH0.y_v3H9fTciofvKNr8qIO2mXPUcvtRzIRb7MUwoa4qnc&
+    routeName=GetCustomer&account_id=95483
+
+###
+
+
+
